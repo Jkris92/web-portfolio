@@ -45,10 +45,10 @@ h1, h2, h3, h4, h5, h6{
 	z-index: 1000;
 	display: flex;
 	justify-content: space-between;
-	align-content: center;
+	align-items: center;
 	padding: 20px 64px;
 	background-color: rgba(16, 16, 16, 0.38);
-	opacity: 2;
+	opacity: 1;
 	backdrop-filter: blur(40px);
 	-webkit-backdrop-filter: blur(40px);
 }
@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6{
 
 .hero-content{
 	position: relative;
-	z-index: 1;
+	z-index: 3;
 	text-align: center;
 	max-width: 820px;
 	margin: auto;
@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6{
 
 .hero-footer{
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -217,7 +217,7 @@ h1, h2, h3, h4, h5, h6{
 
 .skills-section{
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -987,6 +987,12 @@ h1, h2, h3, h4, h5, h6{
 
 	.hero-header {
 		padding: 18px 48px;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.logo{
+		margin-right: auto;
 	}
 
 	.hero-title {
@@ -1395,5 +1401,87 @@ h1, h2, h3, h4, h5, h6{
 	.footer-col {
 		min-width: 0 !important;
 		width: 100% !important;
+	}
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.logo {
+	line-height: 1;
+}
+
+.brand-avatar {
+	--avatar-size: 28px;
+	display: none;
+	flex: 0 0 var(--avatar-size);
+	width: var(--avatar-size);
+	height: var(--avatar-size);
+	border-radius: 50%;
+	overflow: hidden;
+	border: 1.5px solid #456504;
+	background-color: #1a1a1a;
+}
+
+.brand-avatar img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	object-position: top center;
+}
+
+/* TABLET & MOBILE */
+@media (max-width: 1366px) {
+	.brand-avatar {
+		display: block;
+	}
+
+	.hero-dp-wrapper {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.brand-avatar {
+		--avatar-size: 26px;
+	}
+}
+
+/* Desktop */
+
+@media (min-width: 1367px) {
+	.brand-avatar {
+		display: none;
+	}
+
+	.hero .hero-dp-wrapper {
+			display: block !important;
+			position: absolute !important;
+			left: 48px !important;
+			bottom: 54px !important;
+			top: auto !important;
+			width: auto !important;
+			height: auto !important;
+			transform: none !important;
+			border: none !important;
+			border-radius: 0 !important;
+			overflow: visible !important;
+			background: transparent !important;
+			z-index: 2;
+			pointer-events: none;
+		}
+
+	.hero .hero-dp-wrapper img {
+		display: block !important;
+		width: auto !important;
+		height: auto !important;
+		max-width: none !important;
+		max-height: none !important;
+		object-fit: initial !important;
+		transform: none !important;
 	}
 }
