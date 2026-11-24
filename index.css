@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6{
 
 .hero-footer{
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -1471,7 +1471,7 @@ h1, h2, h3, h4, h5, h6{
 			border-radius: 0 !important;
 			overflow: visible !important;
 			background: transparent !important;
-			z-index: 2;
+			z-index: 1;
 			pointer-events: none;
 		}
 
